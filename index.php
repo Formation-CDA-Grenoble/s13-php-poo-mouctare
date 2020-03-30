@@ -23,7 +23,7 @@ $myArticle
 
 // Crée un article à l'aide de son constructeur
 $myCategory = new Category(
-    'Culture'
+    
 );
 // Crée un article à l'aide des setters
 $myCategory = new Category();
@@ -31,7 +31,18 @@ $myCategory = new Category();
 $myCategory
     
     ->setName('Culture');
-var_dump($myCategory); die();
+
+
+    $myCategory = new Category();
+
+$myCategory
+    ->setName('Torisme');
+
+    $myCategory = new Category();
+
+$myCategory
+->setName('Santé');
+//var_dump($myCategory); die();
 ?>
 
 
@@ -45,9 +56,11 @@ var_dump($myCategory); die();
 <body>
     <h1><?= $myArticle->getTitle() ?></h1>
     <img src="<?= $myArticle->getCover() ?>" />
+   
     <p>
         <?= $myArticle->getContent() ?>
     </p>
+    <h3><?= $myCategory->getName() ?></h3>
     <div>
         Published in <?= $myArticle->getCategory() ?> on <?= $myArticle->getCreatedAt()->format('Y-m-d H:i:s') ?>
     </div>
