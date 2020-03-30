@@ -5,7 +5,7 @@ class Category{
     private $name;
 
     public function __construct(
-     $name = '',
+     $name = ''
 
 
      ) {
@@ -26,9 +26,10 @@ class Category{
     {
         return $this->name;
     }
-    public function setContent(string $name): Article
+    public function setName(string $name): Category
     {
         $this->name = $name;
 
         return $this;
     }
+}

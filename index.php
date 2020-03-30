@@ -1,6 +1,7 @@
 <?php
 
 require_once 'models/Article.php';
+require_once 'models/Category.php';
 
 // Crée un article à l'aide de son constructeur
 $myArticle = new Article(
@@ -20,7 +21,17 @@ $myArticle
     ->setCover('http://imgs.abduzeedo.com/files/francois/wallpapers/wpw408/abdz_infrared_arashiyama_mockup.jpg')
     ->setCategory('News');
 
-var_dump($myArticle); die();
+// Crée un article à l'aide de son constructeur
+$myCategory = new Category(
+    'Culture'
+);
+// Crée un article à l'aide des setters
+$myCategory = new Category();
+
+$myCategory
+    
+    ->setName('Culture');
+var_dump($myCategory); die();
 ?>
 
 
